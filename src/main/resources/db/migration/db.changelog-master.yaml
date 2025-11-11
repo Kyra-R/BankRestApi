@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: db/migration/001-create-roles.yaml
+  - include:
+      file: db/migration/002-create-users.yaml
+  - include:
+      file: db/migration/003-create-cards.yaml
+  - include:
+      file: db/migration/004-insert-roles.yaml
+  - include:
+      file: db/migration/005-insert-admin-user.yaml

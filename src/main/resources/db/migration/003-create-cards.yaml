@@ -1,0 +1,52 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: kira
+      changes:
+        - createTable:
+            tableName: cards
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_cards
+
+              - column:
+                  name: card_number_encrypted
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: owner_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_cards_owner
+                    references: users(id)
+
+              - column:
+                  name: expiration_month
+                  type: INT
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: expiration_year
+                  type: INT
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: status
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: balance
+                  type: NUMERIC(15,2)
+                  constraints:
+                    nullable: false

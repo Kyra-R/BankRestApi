@@ -1,0 +1,39 @@
+
+server:
+  port: 8080
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobtest
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+  liquibase:
+    change-log: classpath:/db/migration/db.changelog-master.yaml
+
+springdoc:
+  swagger-ui:
+    enabled: true
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+
+
+jwt_secret: JAHFIDS8724yuJDGBHFJKdsgyfgsdhjfg&^%FDTS&TFGYuk
+encryption:
+  aes-key: "MySuperSecretKey12345678"
+
+jwt:
+  issuer: jobtest
+
+
+
+

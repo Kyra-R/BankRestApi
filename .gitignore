@@ -1,0 +1,16 @@
+# IntelliJ IDEA
+*.iml
+.idea/
+out/
+*.iws
+
+# SonarLint
+.idea/sonarlint/
+
+# Maven / Gradle
+target/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
