@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Schema(description = "DTO для отображения информации о банковской карте")
 public class CardDTO {
     @Schema(description = "Номер карты (замаскирован для обычного пользователя, виден админу)",
-            example = "**** **** **** 1234")
+            example = "**** **** **** 1234, при создании карты 1111222233334444")
     public String maskedNumber;
 
     @Schema(description = "Имя владельца карты", example = "testuser")
